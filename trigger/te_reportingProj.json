@@ -1,0 +1,24 @@
+{
+	"name": "te_reportingProj",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "1 Master Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/sharepoint/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/577fbc6b-a5a6-4831-9d80-4d6ded623767/resourceGroups/reportingProj-RG/providers/Microsoft.Storage/storageAccounts/reportingprojdlake",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

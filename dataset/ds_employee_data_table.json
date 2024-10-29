@@ -1,0 +1,35 @@
+{
+	"name": "ds_employee_data_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "empid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "country",
+				"type": "varchar"
+			},
+			{
+				"name": "department",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "rs",
+			"table": "employee_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,33 @@
+{
+	"name": "6 transformation-DBW",
+	"properties": {
+		"activities": [
+			{
+				"name": "transformation-DBW",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/reportingProj/repProj_analysis"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_reportingProjDBW",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "reportingProj"
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-10-10T11:23:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

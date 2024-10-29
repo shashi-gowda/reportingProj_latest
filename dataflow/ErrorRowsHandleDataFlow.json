@@ -1,0 +1,109 @@
+{
+	"name": "ErrorRowsHandleDataFlow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_sales_malformed",
+						"type": "DatasetReference"
+					},
+					"name": "salesmalformed"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_salestable_badrecords",
+						"type": "DatasetReference"
+					},
+					"name": "tblsalesbad"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_salesTable_good",
+						"type": "DatasetReference"
+					},
+					"name": "tblsalesgood"
+				}
+			],
+			"transformations": [
+				{
+					"name": "split1"
+				},
+				{
+					"name": "fileNameColforBadRows"
+				},
+				{
+					"name": "fileNameColForgoodRows"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          saleDate as string,",
+				"          salesItem as string,",
+				"          country as string,",
+				"          quantity as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> salesmalformed",
+				"salesmalformed split(isNull(toDate(saleDate, 'yyyy-MM-dd')),",
+				"     disjoint: false) ~> split1@(errorRows, goodRows)",
+				"split1@errorRows derive(filename = 'sales_data_malformed.csv') ~> fileNameColforBadRows",
+				"split1@goodRows derive(filename = 'sales_data_malformed.csv',",
+				"          saleDate = toDate(saleDate, 'yyyy-MM-dd'),",
+				"          quantity = toInteger(quantity)) ~> fileNameColForgoodRows",
+				"fileNameColforBadRows sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          saleDate as string,",
+				"          salesItem as string,",
+				"          country as string,",
+				"          quantity as string,",
+				"          fileName as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          saleDate,",
+				"          salesItem,",
+				"          country,",
+				"          quantity,",
+				"          fileName = filename",
+				"     )) ~> tblsalesbad",
+				"fileNameColForgoodRows sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          saleDate as date,",
+				"          salesItem as string,",
+				"          country as string,",
+				"          quantity as integer,",
+				"          fileName as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          saleDate,",
+				"          salesItem,",
+				"          country,",
+				"          quantity,",
+				"          fileName = filename",
+				"     )) ~> tblsalesgood"
+			]
+		}
+	}
+}

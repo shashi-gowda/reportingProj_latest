@@ -1,0 +1,41 @@
+{
+	"name": "ds_salestable_badrecords",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "realScenarios"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "saleDate",
+				"type": "varchar"
+			},
+			{
+				"name": "salesItem",
+				"type": "varchar"
+			},
+			{
+				"name": "country",
+				"type": "varchar"
+			},
+			{
+				"name": "quantity",
+				"type": "varchar"
+			},
+			{
+				"name": "fileName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "rs",
+			"table": "tbl_sales_bad"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

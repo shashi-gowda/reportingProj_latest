@@ -1,0 +1,17 @@
+{
+	"name": "ds_azuresql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "client",
+			"table": "hydration"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,42 @@
+{
+	"name": "ds_salesTable_good",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "realScenarios"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "saleDate",
+				"type": "date"
+			},
+			{
+				"name": "salesItem",
+				"type": "varchar"
+			},
+			{
+				"name": "country",
+				"type": "varchar"
+			},
+			{
+				"name": "quantity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "fileName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "rs",
+			"table": "tbl_sales"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

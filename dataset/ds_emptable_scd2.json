@@ -1,0 +1,44 @@
+{
+	"name": "ds_emptable_scd2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "surrKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "empid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "empname",
+				"type": "varchar"
+			},
+			{
+				"name": "gender",
+				"type": "varchar"
+			},
+			{
+				"name": "country",
+				"type": "varchar"
+			},
+			{
+				"name": "isActive",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "rs",
+			"table": "employee_data_scd2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

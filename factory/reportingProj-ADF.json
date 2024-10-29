@@ -1,0 +1,9 @@
+{
+	"name": "reportingProj-ADF",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c3af2705-bc46-4245-830e-d8c980341962",
+		"tenantId": "ac783047-ce73-4fba-9e82-978d4195a1a1"
+	}
+}
