@@ -1,0 +1,9 @@
+{
+	"name": "drevisionfactory",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ff217f7f-f3c8-4611-adac-19f15051157f",
+		"tenantId": "3de75ee7-2fe4-4fc8-bf9f-63fe354ae637"
+	}
+}
