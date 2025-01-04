@@ -7,10 +7,10 @@
 		"typeProperties": {
 			"connectionString": "integrated security=True;data source=DESKTOP-QBLMT5V\\SQLEXPRESS;initial catalog=reportingProject",
 			"userName": "DESKTOP-QBLMT5V\\ADMIN",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhNmQwZmExYy1lZjU0LTQyY2MtYTc5MC0yZjhlZGU2OTc2N2YiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwNDE1ZGNlMC1jZmMxLTQzOTQtYTIxMS05YTMzMTFmMzAxMDYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "IR-onPrems",
+			"referenceName": "IR-onprems",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
