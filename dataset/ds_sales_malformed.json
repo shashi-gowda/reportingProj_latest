@@ -1,10 +1,6 @@
 {
 	"name": "ds_sales_malformed",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_reportingProjdlake",
-			"type": "LinkedServiceReference"
-		},
 		"folder": {
 			"name": "realScenarios"
 		},

@@ -1,10 +1,6 @@
 {
 	"name": "ds_bronze",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_reportingProjdlake",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"FileName": {
 				"type": "string"

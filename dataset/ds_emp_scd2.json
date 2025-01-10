@@ -1,10 +1,6 @@
 {
 	"name": "ds_emp_scd2",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_reportingProjdlake",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
