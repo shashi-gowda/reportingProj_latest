@@ -226,7 +226,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[ADFEndLogs]",
+					"storedProcedureName": "[dbo].[usp_ADFEndLogs]",
 					"storedProcedureParameters": {
 						"p_EndTime": {
 							"value": {
@@ -280,7 +280,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[ADFEndLogs]",
+					"storedProcedureName": "[dbo].[usp_ADFEndLogs]",
 					"storedProcedureParameters": {
 						"p_EndTime": {
 							"value": {

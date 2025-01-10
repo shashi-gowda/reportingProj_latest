@@ -2,7 +2,7 @@
 	"name": "ds_sharepoint",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_reportingProjdlake",
+			"referenceName": "ls_drevisiondlake",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],

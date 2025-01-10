@@ -2,7 +2,7 @@
 	"name": "ds_hydration",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_reportingProjdlake",
+			"referenceName": "ls_drevisiondlake",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
