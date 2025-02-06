@@ -1,0 +1,9 @@
+{
+	"name": "referADF",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "360e6a6d-1c42-4445-a687-9bded75f08b6",
+		"tenantId": "06ffe2d5-5bb6-432b-9019-e9bb6d5a558f"
+	}
+}
